@@ -9,7 +9,7 @@ body {
 }
 
 nav {
-  padding: 15px; 
+  padding: 10px; 
   background-color: #fff; 
   display: flex;
   align-items: center; 
@@ -22,13 +22,16 @@ nav {
   align-items: center;
   padding: 5px; 
 }
-
-.logo__img img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%; 
-  margin-right: 10px;
+.logo__img span{
+  font-size: 38px;
+  font-weight: bold;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: rgb(108, 153, 231);
+  color: rgb(243, 238, 238);
+  padding: 12px;
+  border-radius: 100%;
 }
+
 
 .search__bar {
   display: flex;
@@ -37,20 +40,26 @@ nav {
 }
 
 .search__bar svg {
-  width: 40px; 
-  height: 40px;
-  margin-right: 5px; 
+  width: 30px; 
+  height: 30px;
+  position: absolute;
+  left: 122.5px;
+  padding-right: -15px; 
 }
 
 .search__bar__input {
   padding: 8px;
   border: 1px solid rgb(208, 205, 205);
-  border-radius: 5px;
-  margin-right: 10px; 
-  height: 40px;
-  padding-left: 35px;
-
+  border-radius: 20px;
+  margin-right: 10px;  
+  height: 47.5px;
+  padding-left: 42.5px;
+  font-size: 18px;
 }
+.search__bar__input:active{
+  border: none;
+}
+
 .nav__btn{
   border-radius: 100%;
   border: 1px dashed rgb(177, 176, 176);
