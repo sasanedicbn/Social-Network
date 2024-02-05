@@ -8,3 +8,109 @@ body {
   background-color: #e6e6ff; 
 }
 
+nav {
+  padding: 15px; 
+  background-color: #fff; 
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+}
+
+.logo__img {
+  /* background-color: #9fbd9b;  */
+  display: flex;
+  align-items: center;
+  padding: 5px; 
+}
+
+.logo__img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; 
+  margin-right: 10px;
+}
+
+.search__bar {
+  display: flex;
+  align-items: center;
+  margin-left: 20px; 
+}
+
+.search__bar svg {
+  width: 40px; 
+  height: 40px;
+  margin-right: 5px; 
+}
+
+.search__bar__input {
+  padding: 8px;
+  border: 1px solid rgb(208, 205, 205);
+  border-radius: 5px;
+  margin-right: 10px; 
+  height: 40px;
+  padding-left: 35px;
+
+}
+.nav__btn{
+  border-radius: 100%;
+  border: 1px dashed rgb(177, 176, 176);
+  cursor: pointer;
+}
+.nav__btn:hover{
+  border: 2px solid black;
+  transition: all 0.5s;
+}
+
+.nav__btn img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+}
+
+.log__out__container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: #fff;
+  width: 190px;
+  height: 90px;
+  border-radius: 5px;
+  opacity: 0;
+  position: absolute;
+}
+.log__out__container svg{
+  background-color: rgb(240, 240, 240);
+  border-radius: 100%;
+  padding: 2.5px;
+  margin-left: 5px;
+}
+
+.my__profile,
+.log__out {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; 
+  padding: 8px;
+
+}
+
+.my__profile svg,
+.log__out svg {
+  width: 30px; 
+  height: 30px;
+  margin-right: 5px; 
+}
+
+
+.my__profile:hover,
+.log__out:hover {
+  cursor: pointer;
+  color: black;
+  font-weight: 500;
+}
+
+
+.search__results {
+  display: none;
+}
