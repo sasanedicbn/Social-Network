@@ -125,8 +125,8 @@ nav {
 .user{
   margin: 0 auto;
   position: relative;
-
   background-color: #fff;
+  padding-bottom: 20px ;
 }
 
 .user__cover__photo{
@@ -194,4 +194,8 @@ font-size: 16px;
 }
 h2,h4,h5{
   margin: 2px;
+}
+h4,h5{
+  margin-top: 2px;
+  color: rgb(80, 76, 76);
 }
