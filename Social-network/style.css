@@ -9,11 +9,13 @@ body {
 }
 
 nav {
-  padding: 10px; 
+  padding: 6px; 
   background-color: #fff; 
   display: flex;
   align-items: center; 
   justify-content: space-between;
+  position: sticky;
+  border-bottom: 1px solid rgb(223, 220, 220);
 }
 
 .logo__img {
@@ -23,7 +25,7 @@ nav {
   padding: 5px; 
 }
 .logo__img span{
-  font-size: 38px;
+  font-size: 34px;
   font-weight: bold;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background-color: rgb(108, 153, 231);
@@ -43,7 +45,7 @@ nav {
   width: 30px; 
   height: 30px;
   position: absolute;
-  left: 122.5px;
+  left: 112.5px;
   padding-right: -15px; 
 }
 
@@ -56,19 +58,14 @@ nav {
   padding-left: 42.5px;
   font-size: 18px;
 }
-.search__bar__input:active{
-  border: none;
-}
+
 
 .nav__btn{
   border-radius: 100%;
   border: 1px dashed rgb(177, 176, 176);
   cursor: pointer;
 }
-.nav__btn:hover{
-  border: 2px solid black;
-  transition: all 0.5s;
-}
+
 
 .nav__btn img {
   width: 55px;
@@ -76,6 +73,7 @@ nav {
   border-radius: 50%;
   border: none;
 }
+
 
 .log__out__container {
   display: flex;
@@ -123,3 +121,4 @@ nav {
 .search__results {
   display: none;
 }
+/* MAIN */
