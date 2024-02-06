@@ -122,3 +122,60 @@ nav {
   display: none;
 }
 /* MAIN */
+.user{
+  margin: 0 auto;
+  position: relative;
+
+  background-color: #fff;
+}
+
+.user__cover__photo{
+  background-color: #e6e6ff;
+  width: 860px;
+  height: 375px;
+  margin: 0  auto;
+  border-bottom-left-radius: 12.5px;
+  border-bottom-right-radius: 12.5px;
+}
+.user__profile{
+display: flex;
+align-items: center;
+justify-content: space-around;
+margin-left: 260px;
+margin-right: 50px;
+}
+.user__text{
+  /* background-color: rgb(155, 94, 2); */
+  padding-left: 40px;
+
+}
+.user__info{
+font-size: 16px;
+
+}
+.user__info span img{
+  padding: 0;
+  margin: 0;
+ border: 4px solid white;
+ border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  left: 20.5%;
+  top: 60.5%;
+}
+
+.user__edit {
+  background-color: #d9d9f2;;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 65px;
+}
