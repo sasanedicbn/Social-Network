@@ -9,7 +9,7 @@ body {
 }
 
 nav {
-  padding: 4px; 
+  padding: 8px; 
   background-color: #fff; 
   display: flex;
   align-items: center; 
@@ -43,7 +43,7 @@ nav {
   width: 24px; 
   height: 24px;
   position: absolute;
-  left: 100px;
+  left: 71.5px;
 }
 
 .search__bar__input {
@@ -137,7 +137,6 @@ margin-left: 260px;
 margin-right: 50px;
 }
 .user__text{
-  /* background-color: rgb(155, 94, 2); */
   padding-left: 40px;
 
 }
