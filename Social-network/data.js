@@ -17,19 +17,19 @@ export const user = {
       id: crypto.randomUUID(),
       name: "Angelina",
       lastName: "Jolie",
-      img: "/assets/Angelina-Jolie.webp",
+      img: "assets/Angelina-Jolie.webp",
     },
     {
       id: crypto.randomUUID(),
       name: "Dobrila ",
       lastName: "Jovina",
-      img: "/assets/dobrila2.jpeg",
+      img: "/assets/dobrila 2.jpeg",
     },
     {
       id: crypto.randomUUID(),
       name: "Jovan",
       lastName: "Jovic",
-      img: "/assets/dobrinko3.webp",
+      img: "/assets/dobrinko 3.webp",
     },
     {
       id: crypto.randomUUID(),
