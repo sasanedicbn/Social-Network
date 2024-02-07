@@ -54,6 +54,7 @@ export const user = {
   posts: [
     {
       id: crypto.randomUUID(),
+      img: "/assets/user.png",
       postText: "Believe you can and you're halfway there.",
       postDate: "2 days ago",
       likes: [
@@ -77,7 +78,7 @@ export const user = {
           name: "Jovan",
           lastName: "Jovic",
           commentText: "Absolutely love this quote!",
-          img: "/assets/dobrinko3.webp",
+          img: "/assets/dobrinko 3.webp",
         },
         {
           name: "Angelina",
@@ -90,6 +91,7 @@ export const user = {
     },
     {
       id: crypto.randomUUID(),
+      img: "/assets/user.png",
       postText:
         "The only limit to our realization of tomorrow will be our doubts of today.",
       postDate: "7 days ago",
@@ -103,6 +105,7 @@ export const user = {
     },
     {
       id: crypto.randomUUID(),
+      img: "/assets/user.png",
       postText: "Don't watch the clock; do what it does. Keep going.",
       postDate: "1 day ago",
       likes: [
