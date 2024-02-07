@@ -227,4 +227,77 @@ li{
 .friends__info p {
   margin-left: 6px;
 }
+/* POSTS */
+.post {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  margin-top: 12px;
+  margin-left: 6px;
+}
 
+.post-text {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.post-date {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.likes-comments-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.likes-comments-container .likes {
+  color: #1976d2;
+  cursor: pointer;
+}
+
+.likes-comments-container .comments {
+  color: #888;
+  cursor: pointer;
+}
+
+.comment {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.comment-text {
+  font-size: 16px;
+}
+
+.comment-info {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.comment-info img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.user-img{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.friends__section{
+  display: flex;
+}
+.user-profile{
+  color: black;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
