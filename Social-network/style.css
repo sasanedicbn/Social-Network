@@ -301,3 +301,8 @@ li{
   font-weight: bold;
   margin-bottom: 10px;
 }
+.like-emoji{
+  opacity: 0.8;
+  color: #1976d2;
+  margin-right: 3px;
+}
