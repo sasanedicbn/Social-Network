@@ -54,3 +54,9 @@ posts.forEach((post) => {
 
   postsContainer.appendChild(postElement);
 });
+
+class Post {
+  constructor(post) {
+    this.post = post;
+  }
+}
