@@ -31,7 +31,7 @@ posts.forEach((post) => {
     <p class="post-text">${post.postText}</p>
 
     <div class="likes-comments-container">
-      <p class="likes">${post.likes.length} Likes</p>
+      <p class="likes"><span class="like-emoji"><ion-icon name="thumbs-up-outline"></ion-icon></span> ${post.likes.length} Likes</p>
       <p class="comments">${post.comments.length} Comments</p>
     </div>
   `;
