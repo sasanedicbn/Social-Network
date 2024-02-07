@@ -190,3 +190,40 @@ h4,h5{
   margin-top: 2px;
   color: rgb(80, 76, 76);
 }
+/* Display friends */
+.friends__section{
+  width: 860px;
+  margin: 0 auto;
+}
+.friend__list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #fff;
+  padding: 10px;
+  width: 420px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.friends-data img{
+  width: 125px;
+  height: 125px;
+  border-radius: 8px;
+}
+
+li{
+  list-style: none;
+}
+.friends-name{
+  padding: 4px;
+}
+.friends__info{
+ width: 420px;
+  background-color: #fff;
+  margin-top: 12px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  
+}
+.friends__info p {
+  margin-left: 6px;
+}
