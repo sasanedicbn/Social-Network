@@ -69,7 +69,7 @@ class Post {
 const POST = new Post();
 const FRIENDS = new Friends();
 POST.redeneringPosts();
-
+FRIENDS.redneringFriends();
 // classa user
 //kad prodje setTim priakzati
 //class visitingprofile fname lname
