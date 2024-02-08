@@ -68,6 +68,7 @@ class Post {
 }
 const POST = new Post();
 const FRIENDS = new Friends();
+POST.redeneringPosts();
 
 // classa user
 //kad prodje setTim priakzati
