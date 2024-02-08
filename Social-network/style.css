@@ -316,6 +316,10 @@ li{
   animation: spin 1s linear infinite;
   margin: auto;
   margin-top: 20%;
+  position: absolute;
+  left: 45%;
+  top: 5%;
+  z-index: 100;
 }
 
 
@@ -328,3 +332,6 @@ li{
 .data {
   display: none; 
 } 
+#app{
+  opacity: 0;
+}

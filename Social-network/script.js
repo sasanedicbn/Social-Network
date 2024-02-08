@@ -1,5 +1,9 @@
 import { user } from "./data";
 const friendsList = document.querySelector(".friend__list");
+const app = document.getElementById("app");
+const spinner = document.querySelector(".spinner");
+
+const globalState = new GlobalState();
 
 class Friends {
   constructor(post) {
@@ -68,5 +72,7 @@ class Post {
 }
 const POST = new Post();
 const FRIENDS = new Friends();
-POST.redeneringPosts();
-FRIENDS.redneringFriends();
+setTimeout(function () {
+  POST.redeneringPosts();
+  FRIENDS.redneringFriends();
+}, 1000);
