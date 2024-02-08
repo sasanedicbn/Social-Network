@@ -8,6 +8,9 @@ export class GlobalState {
   constructor() {
     this.Loaded = false;
   }
+  setToLoaded() {
+    this.Loaded = true;
+  }
 }
 const globalState = new GlobalState();
 
