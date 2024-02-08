@@ -3,6 +3,12 @@ const friendsList = document.querySelector(".friend__list");
 const app = document.getElementById("app");
 const spinner = document.querySelector(".spinner");
 
+export class GlobalState {
+  Loaded;
+  constructor() {
+    this.Loaded = false;
+  }
+}
 const globalState = new GlobalState();
 
 class Friends {
