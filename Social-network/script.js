@@ -84,4 +84,5 @@ const FRIENDS = new Friends();
 setTimeout(function () {
   POST.redeneringPosts();
   FRIENDS.redneringFriends();
+  globalState.setToLoaded();
 }, 1000);
