@@ -86,3 +86,13 @@ setTimeout(function () {
   FRIENDS.redneringFriends();
   globalState.setToLoaded();
 }, 1000);
+
+function checkLoad() {
+  if (globalState.Loaded) {
+    app.style.opacity = "10";
+    spinner.style.display = "none";
+  } else {
+    setTimeout(checkLoad, 100);
+  }
+}
+checkLoad();
