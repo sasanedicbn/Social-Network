@@ -1,7 +1,7 @@
 import { user } from "./data";
 const friendsList = document.querySelector(".friend__list");
 
-class Post {
+class Friends {
   constructor(post) {
     this.post = post;
   }
@@ -22,7 +22,7 @@ class Post {
     });
   }
 }
-class Friends {
+class Post {
   constructor() {}
   redeneringPosts() {
     const postsContainer = document.querySelector(".posts");
@@ -66,6 +66,7 @@ class Friends {
     });
   }
 }
+const POST = new Post();
 
 // classa user
 //kad prodje setTim priakzati
