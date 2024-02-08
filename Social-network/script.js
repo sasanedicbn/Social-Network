@@ -67,6 +67,7 @@ class Post {
   }
 }
 const POST = new Post();
+const FRIENDS = new Friends();
 
 // classa user
 //kad prodje setTim priakzati
