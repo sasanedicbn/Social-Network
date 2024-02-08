@@ -1,28 +1,35 @@
 import { user } from "./data";
 const friendsList = document.querySelector(".friend__list");
-const friends = user.friends;
-friends.forEach((friend) => {
-  const listItem = document.createElement("li");
-  listItem.innerHTML = `
-  
-    <div class="friends-data">
-      <img src="${friend.img}" alt="${friend.name}"/>
-      <p class="friends-name">
-        ${friend.name}  ${friend.lastName}
-      </p>
-    </div>
-  `;
-  friendsList.appendChild(listItem);
-});
-console.log(friends);
-const postsContainer = document.querySelector(".posts");
-const posts = user.posts;
 
-posts.forEach((post) => {
-  const postElement = document.createElement("div");
-  postElement.classList.add("post");
+class Post {
+  constructor(post) {
+    this.post = post;
+  }
+  redneringFriends() {
+    const friends = user.friends;
+    friends.forEach((friend) => {
+      const listItem = document.createElement("li");
+      listItem.innerHTML = `
+      
+        <div class="friends-data">
+          <img src="${friend.img}" alt="${friend.name}"/>
+          <p class="friends-name">
+            ${friend.name}  ${friend.lastName}
+          </p>
+        </div>
+      `;
+      friendsList.appendChild(listItem);
+    });
+  }
+  redeneringPosts() {
+    const postsContainer = document.querySelector(".posts");
+    const posts = user.posts;
 
-  postElement.innerHTML = `
+    posts.forEach((post) => {
+      const postElement = document.createElement("div");
+      postElement.classList.add("post");
+
+      postElement.innerHTML = `
     <img src="${post.img}" alt="${post.img}" class="user-img" />
     <div class="user-time">
     <span class="user-profile">Sasa Nedic</span>
@@ -36,11 +43,11 @@ posts.forEach((post) => {
     </div>
   `;
 
-  post.comments.forEach((comment) => {
-    const commentElement = document.createElement("div");
-    commentElement.classList.add("comment");
+      post.comments.forEach((comment) => {
+        const commentElement = document.createElement("div");
+        commentElement.classList.add("comment");
 
-    commentElement.innerHTML = `
+        commentElement.innerHTML = `
       
       <div class="comment-info">
         <img src="${comment.img}" alt="${comment.name}" />
@@ -49,14 +56,36 @@ posts.forEach((post) => {
       <p class="comment-text">${comment.commentText}</p>
     `;
 
-    postElement.appendChild(commentElement);
-  });
+        postElement.appendChild(commentElement);
+      });
 
-  postsContainer.appendChild(postElement);
-});
-
-class Post {
-  constructor(post) {
-    this.post = post;
+      postsContainer.appendChild(postElement);
+    });
   }
 }
+const 
+
+// console.log(friends);
+
+// class Post {
+//   constructor(post) {
+//     this.post = post;
+//   }
+//   likePost(like) {
+//     this.post.likes.push(like);
+//   }
+// }
+// const POST = new Post(user);
+// console.log(POST.likePost());
+// console.log(POST.post.posts);
+// const likes = document.querySelector(".likes");
+// const postsAll = POST.post.posts;
+// likes.addEventListener("click", function (event) {
+//   postsAll.forEach((post) => console.log(post));
+//   console.log("ziv");
+// });
+
+// classa user
+//kad prodje setTim priakzati
+//class visitingprofile fname lname
+//
