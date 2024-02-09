@@ -79,6 +79,14 @@ class Post {
     });
   }
 }
+class Like {
+  constructor(like) {
+    this.like = like;
+  }
+  addLike(like) {
+    this.like.push(like);
+  }
+}
 const POST = new Post();
 const FRIENDS = new Friends();
 setTimeout(function () {
