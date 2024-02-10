@@ -44,7 +44,7 @@ class Post {
       const postId = post.id;
       const postElement = document.createElement("div");
       postElement.classList.add("post");
-      postElement.setAttribute("id", postId);
+      postElement.setAttribute("data-id", postId);
 
       postElement.innerHTML = `
     <img src="${post.img}" alt="${post.img}" class="user-img" />
