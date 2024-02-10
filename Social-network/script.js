@@ -2,6 +2,7 @@ import { user } from "./data";
 const friendsList = document.querySelector(".friend__list");
 const app = document.getElementById("app");
 const spinner = document.querySelector(".spinner");
+const postsContainer = document.querySelector(".posts");
 
 export class GlobalState {
   Loaded;
@@ -38,12 +39,12 @@ class Friends {
 class Post {
   constructor() {}
   redeneringPosts() {
-    const postsContainer = document.querySelector(".posts");
     const posts = user.posts;
-
     posts.forEach((post) => {
+      const postId = post.id;
       const postElement = document.createElement("div");
       postElement.classList.add("post");
+      postElement.setAttribute("id", postId);
 
       postElement.innerHTML = `
     <img src="${post.img}" alt="${post.img}" class="user-img" />
@@ -87,13 +88,30 @@ class Like {
     this.like.push(like);
   }
 }
+const LIKE = new Like();
 const POST = new Post();
 const FRIENDS = new Friends();
 setTimeout(function () {
   POST.redeneringPosts();
   FRIENDS.redneringFriends();
   globalState.setToLoaded();
+  LikeEventListener();
 }, 1000);
+
+function LikeEventListener() {
+  postsContainer.addEventListener("click", function (event) {
+    if (event.target.classList.contains("likes")) {
+      const postElement = event.target.closest(".post");
+      if (!postElement) return;
+      const postId = postElement.dataset.id;
+      console.log(postId);
+
+      //   const likes = user.posts.filter((post) => post.id === id);
+      //   console.log(likes);
+    }
+  });
+  console.log(postsContainer);
+}
 
 function checkLoad() {
   if (globalState.Loaded) {
