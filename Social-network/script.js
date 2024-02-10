@@ -112,7 +112,12 @@ function LikeEventListener() {
       if (!post) return;
 
       const currentUser = { name: "Sasa", lastName: "Nedic" };
-
+      const likeIndex = post.likes.findIndex(
+        (like) =>
+          like.name === currentUser.name &&
+          like.lastName === currentUser.lastName
+      );
+      console.log(likeIndex);
       const LIKE = new Like(post.likes);
       const currentPostArr = post.likes;
       console.log(currentPostArr);
