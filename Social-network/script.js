@@ -111,10 +111,14 @@ function LikeEventListener() {
       const post = user.posts.find((post) => post.id === postId);
       if (!post) return;
 
-      const LIKE = new Like(post.likes);
+      const currentUser = { name: "Sasa", lastName: "Nedic" };
 
-      LIKE.addLike({ name: "Sasa", lastName: "Nedic" });
+      const LIKE = new Like(post.likes);
       const currentPostArr = post.likes;
+      console.log(currentPostArr);
+      console.log(currentPostArr.lastname);
+      LIKE.addLike({ name: "Sasa", lastName: "Nedic" });
+
       console.log(currentPostArr);
       postElement.querySelector(
         ".likes"
