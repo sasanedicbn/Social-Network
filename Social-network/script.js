@@ -113,6 +113,13 @@ function LikeEventListener() {
 
       const LIKE = new Like(post.likes);
 
+      LIKE.addLike({ name: "Sasa", lastName: "Nedic" });
+      const currentPostArr = post.likes;
+      console.log(currentPostArr);
+      postElement.querySelector(
+        ".likes"
+      ).innerHTML = `<span class="like-emoji"><ion-icon name="thumbs-up-outline"></ion-icon></span> ${post.likes.length} Likes`;
+    }
   });
 }
 
