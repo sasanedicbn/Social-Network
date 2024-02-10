@@ -37,7 +37,9 @@ class Friends {
   }
 }
 class Post {
-  constructor() {}
+  constructor(post) {
+    this.post = post;
+  }
   redeneringPosts() {
     const posts = user.posts;
     posts.forEach((post) => {
@@ -88,7 +90,7 @@ class Like {
     this.like.push(like);
   }
 }
-const LIKE = new Like();
+
 const POST = new Post();
 const FRIENDS = new Friends();
 setTimeout(function () {
@@ -106,11 +108,12 @@ function LikeEventListener() {
       const postId = postElement.dataset.id;
       console.log(postId);
 
-      //   const likes = user.posts.filter((post) => post.id === id);
-      //   console.log(likes);
-    }
+      const post = user.posts.find((post) => post.id === postId);
+      if (!post) return;
+
+      const LIKE = new Like(post.likes);
+
   });
-  console.log(postsContainer);
 }
 
 function checkLoad() {
