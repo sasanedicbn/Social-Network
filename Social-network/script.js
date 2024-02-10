@@ -116,7 +116,6 @@ function LikeEventListener() {
       const LIKE = new Like(post.likes);
       const currentPostArr = post.likes;
       console.log(currentPostArr);
-      console.log(currentPostArr.lastname);
       LIKE.addLike({ name: "Sasa", lastName: "Nedic" });
 
       console.log(currentPostArr);
