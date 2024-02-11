@@ -77,6 +77,7 @@ class Post {
 
         postElement.appendChild(commentElement);
       });
+      updateLikeDisplay(postElement, post.likes);
 
       postsContainer.appendChild(postElement);
     });
@@ -126,6 +127,8 @@ function LikeEventListener() {
       console.log(likeIndex);
       const currentPostArr = post.likes;
       console.log(currentPostArr);
+
+      updateLikeDisplay(postElement, post.likes);
     }
   });
 }
@@ -143,7 +146,7 @@ function updateLikeDisplay(postElement, likes) {
       likes[1].lastName
     } and ${likes.length - 2} more`;
   } else {
-    likes.forEach((like, index) => {
+    likes.forEach((like) => {
       if (like.length === 0) {
         LikeText += `${like.name} ${like.lastName}`;
       } else {
