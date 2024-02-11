@@ -57,7 +57,7 @@ class Post {
     <p class="post-text">${post.postText}</p>
 
     <div class="likes-comments-container">
-      <p class="likes"><span class="like-emoji"><ion-icon name="thumbs-up-outline"></ion-icon></span> ${post.likes.length} Likes</p>
+      <p class="likes"><span class="like-emoji"><ion-icon name="thumbs-up-outline"></ion-icon></span> ${post.likes.length} </p>
       <p class="comments">${post.comments.length} Comments</p>
     </div>
   `;
@@ -111,22 +111,21 @@ function LikeEventListener() {
       const post = user.posts.find((post) => post.id === postId);
       if (!post) return;
 
+      const LIKE = new Like(post.likes);
       const currentUser = { name: "Sasa", lastName: "Nedic" };
       const likeIndex = post.likes.findIndex(
         (like) =>
           like.name === currentUser.name &&
           like.lastName === currentUser.lastName
       );
+      if (likeIndex === -1) {
+        LIKE.addLike(currentUser);
+      } else {
+        post.likes.splice(likeIndex, 1);
+      }
       console.log(likeIndex);
-      const LIKE = new Like(post.likes);
       const currentPostArr = post.likes;
       console.log(currentPostArr);
-      LIKE.addLike({ name: "Sasa", lastName: "Nedic" });
-
-      console.log(currentPostArr);
-      postElement.querySelector(
-        ".likes"
-      ).innerHTML = `<span class="like-emoji"><ion-icon name="thumbs-up-outline"></ion-icon></span> ${post.likes.length} Likes`;
     }
   });
 }
