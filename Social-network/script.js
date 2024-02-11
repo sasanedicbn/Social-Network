@@ -74,6 +74,12 @@ class Post {
 
       commentsToggle.addEventListener("click", function () {
         const comments = postElement.querySelectorAll(".comment");
+        comments.forEach((commentInfo) => {
+          commentInfo.classList.toggle("hiddenComments");
+          if (commentInfo.includes("hiddenComments")) {
+            console.log("radi");
+          }
+        });
       });
 
       post.comments.forEach((comment) => {
