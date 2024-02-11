@@ -339,3 +339,12 @@ li{
 .hiddenComments{
   display: none;
 }
+.comment-input{
+  margin-top: 8px;
+  width: 100%;
+
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  border-radius: 6px; 
+  font-size: 14px; 
+}

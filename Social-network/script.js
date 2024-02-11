@@ -69,6 +69,12 @@ class Post {
       <p class="likes"><span class="like-emoji"><ion-icon name="thumbs-up-outline"></ion-icon></span> ${post.likes.length} </p>
       <p class="comments">${post.comments.length} Comments</p>
     </div>
+    <div class="comment-info current-user">
+        <img src="${post.img}" alt="${post.name}" />
+        <input type="text" placeholder="Write a comment"class="comment-input"></input>
+      </div>
+      
+
   `;
       const commentsToggle = postElement.querySelector(".comments");
 
@@ -76,9 +82,6 @@ class Post {
         const comments = postElement.querySelectorAll(".comment");
         comments.forEach((commentInfo) => {
           commentInfo.classList.toggle("hiddenComments");
-          if (commentInfo.includes("hiddenComments")) {
-            console.log("radi");
-          }
         });
       });
 
