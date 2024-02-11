@@ -137,7 +137,13 @@ function updateLikeDisplay(postElement, likes) {
     likesContainer.innerHTML = `${icons} No Likes`;
     return;
   }
- 
+  let LikeText = `${icons} ${likes.length} `;
+  if (likes.length > 2) {
+    LikeText += `${likes[0].name} ${likes[0].lastName}, ${likes[1].name} ${
+      likes[1].lastName
+    } and ${likes.length - 2} more`;
+  }
+}
 
 function checkLoad() {
   if (globalState.Loaded) {
