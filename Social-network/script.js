@@ -132,7 +132,12 @@ function LikeEventListener() {
 function updateLikeDisplay(postElement, likes) {
   const likesContainer = postElement.querySelector(".likes");
   const icons = `<span class="like-emoji"><ion-icon name="thumbs-up-outline"></ion-icon></span>`;
-}
+
+  if (likes.length === 0) {
+    likesContainer.innerHTML = `${icons} No Likes`;
+    return;
+  }
+ 
 
 function checkLoad() {
   if (globalState.Loaded) {
