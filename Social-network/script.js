@@ -14,16 +14,7 @@ export class GlobalState {
   }
 }
 const globalState = new GlobalState();
-class Comments {
-  comment = false;
-  constructor(comment) {
-    this.comment = comment;
-  }
-  toggleComments() {
-    this.comment = !false;
-  }
-}
-const COMMENTS = new Comments();
+
 class Friends {
   constructor(post) {
     this.post = post;
@@ -49,6 +40,7 @@ class Post {
   constructor(post) {
     this.post = post;
   }
+
   redeneringPosts() {
     const posts = user.posts;
     posts.forEach((post) => {
@@ -73,19 +65,22 @@ class Post {
         <img src="${post.img}" alt="${post.name}" />
         <input type="text" placeholder="Write a comment"class="comment-input"></input>
       </div>
-      
-
   `;
+
       const commentsToggle = postElement.querySelector(".comments");
 
       commentsToggle.addEventListener("click", function () {
         const comments = postElement.querySelectorAll(".comment");
         comments.forEach((commentInfo) => {
           commentInfo.classList.toggle("hiddenComments");
+          addComments(postElement);
         });
       });
+      //   console.log(post);
+      //   addComments(postElement);
 
       post.comments.forEach((comment) => {
+        // console.log(comment);
         const commentElement = document.createElement("div");
         commentElement.classList.add("comment");
 
@@ -189,3 +184,22 @@ function checkLoad() {
   }
 }
 checkLoad();
+function addComments(postElement) {
+  const postid = postElement.dataset.id;
+  const userInput = postElement.querySelector(".comment-input").value.trim();
+  if (!userInput) return;
+
+  const post = user.posts.find((post) => post.id === postid);
+
+  console.log(post);
+  const newComment = {
+    img: "./assets/user.png",
+    name: "Sasa",
+    lastName: "Nedic",
+    commentText: userInput,
+  };
+  post.comments.push(newComment);
+
+  postsContainer.innerHTML = "";
+  POST.redeneringPosts();
+}
