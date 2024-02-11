@@ -142,7 +142,16 @@ function updateLikeDisplay(postElement, likes) {
     LikeText += `${likes[0].name} ${likes[0].lastName}, ${likes[1].name} ${
       likes[1].lastName
     } and ${likes.length - 2} more`;
+  } else {
+    likes.forEach((like, index) => {
+      if (like.length === 0) {
+        LikeText += `${like.name} ${like.lastName}`;
+      } else {
+        LikeText += `${like.name} ${like.lastName}, `;
+      }
+    });
   }
+  likesContainer.innerHTML = LikeText;
 }
 
 function checkLoad() {
