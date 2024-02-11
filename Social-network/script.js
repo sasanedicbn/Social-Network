@@ -3,6 +3,7 @@ const friendsList = document.querySelector(".friend__list");
 const app = document.getElementById("app");
 const spinner = document.querySelector(".spinner");
 const postsContainer = document.querySelector(".posts");
+const btn = document.querySelector(".nav__btn");
 
 export class GlobalState {
   Loaded;
@@ -84,11 +85,8 @@ class Post {
           addComments(postElement);
         });
       });
-      //   console.log(post);
-      //   addComments(postElement);
 
       post.comments.forEach((comment) => {
-        // console.log(comment);
         const commentElement = document.createElement("div");
         commentElement.classList.add("comment");
 
@@ -212,7 +210,6 @@ function addComments(postElement) {
   POST.redeneringPosts();
 }
 
-const btn = document.querySelector(".nav__btn");
 btn.addEventListener("click", function () {
   const menu = document.querySelector(".log__out__container ");
   menu.classList.toggle("showMenu");
