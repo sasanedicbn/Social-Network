@@ -67,6 +67,14 @@ class Post {
       </div>
   `;
 
+      const commentInput = postElement.querySelector(".comment-input");
+
+      commentInput.addEventListener("keyup", function (event) {
+        if (event.keyCode === 13) {
+          addComments(postElement);
+        }
+      });
+
       const commentsToggle = postElement.querySelector(".comments");
 
       commentsToggle.addEventListener("click", function () {
@@ -203,3 +211,9 @@ function addComments(postElement) {
   postsContainer.innerHTML = "";
   POST.redeneringPosts();
 }
+
+const btn = document.querySelector(".nav__btn");
+btn.addEventListener("click", function () {
+  const menu = document.querySelector(".log__out__container ");
+  menu.classList.toggle("showMenu");
+});
