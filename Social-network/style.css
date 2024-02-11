@@ -336,3 +336,6 @@ li{
 #app{
   opacity: 0;
 }
+.hiddenComments{
+  display: none;
+}

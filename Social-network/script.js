@@ -14,7 +14,16 @@ export class GlobalState {
   }
 }
 const globalState = new GlobalState();
-
+class Comments {
+  comment = false;
+  constructor(comment) {
+    this.comment = comment;
+  }
+  toggleComments() {
+    this.comment = !false;
+  }
+}
+const COMMENTS = new Comments();
 class Friends {
   constructor(post) {
     this.post = post;
@@ -61,6 +70,11 @@ class Post {
       <p class="comments">${post.comments.length} Comments</p>
     </div>
   `;
+      const commentsToggle = postElement.querySelector(".comments");
+
+      commentsToggle.addEventListener("click", function () {
+        const comments = postElement.querySelectorAll(".comment");
+      });
 
       post.comments.forEach((comment) => {
         const commentElement = document.createElement("div");
