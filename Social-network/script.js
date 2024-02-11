@@ -129,6 +129,10 @@ function LikeEventListener() {
     }
   });
 }
+function updateLikeDisplay(postElement, likes) {
+  const likesContainer = postElement.querySelector(".likes");
+  const icons = `<span class="like-emoji"><ion-icon name="thumbs-up-outline"></ion-icon></span>`;
+}
 
 function checkLoad() {
   if (globalState.Loaded) {
