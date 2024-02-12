@@ -40,70 +40,12 @@ class Like {
   }
 }
 
-const POST = new Post();
-const FRIENDS = new Friends();
 setTimeout(function () {
   UX.renderPosts(posts);
   UX.renderFriends(friends);
   globalState.setToLoaded();
   //   LikeEventListener();
 }, 1000);
-
-// function LikeEventListener() {
-//   postsContainer.addEventListener("click", function (event) {
-//     if (event.target.classList.contains("likes")) {
-//       const postElement = event.target.closest(".post");
-//       if (!postElement) return;
-//       const postId = postElement.dataset.id;
-//       console.log(postId);
-
-//       const post = user.posts.find((post) => post.id === postId);
-//       if (!post) return;
-
-//       const LIKE = new Like(post.likes);
-//       const currentUser = { name: "Sasa", lastName: "Nedic" };
-//       const likeIndex = post.likes.findIndex(
-//         (like) =>
-//           like.name === currentUser.name &&
-//           like.lastName === currentUser.lastName
-//       );
-//       if (likeIndex === -1) {
-//         LIKE.addLike(currentUser);
-//       } else {
-//         post.likes.splice(likeIndex, 1);
-//       }
-//       console.log(likeIndex);
-//       const currentPostArr = post.likes;
-//       console.log(currentPostArr);
-
-//       updateLikeDisplay(postElement, post.likes);
-//     }
-//   });
-// }
-// function updateLikeDisplay(postElement, likes) {
-//   const likesContainer = postElement.querySelector(".likes");
-//   const icons = `<span class="like-emoji"><ion-icon name="thumbs-up-outline"></ion-icon></span>`;
-
-//   if (likes.length === 0) {
-//     likesContainer.innerHTML = `${icons} No Likes`;
-//     return;
-//   }
-//   let LikeText = `${icons} ${likes.length} `;
-//   if (likes.length > 2) {
-//     LikeText += `${likes[0].name} ${likes[0].lastName}, ${likes[1].name} ${
-//       likes[1].lastName
-//     } and ${likes.length - 2} more`;
-//   } else {
-//     likes.forEach((like) => {
-//       if (like.length === 0) {
-//         LikeText += `${like.name} ${like.lastName}`;
-//       } else {
-//         LikeText += `${like.name} ${like.lastName}, `;
-//       }
-//     });
-//   }
-//   likesContainer.innerHTML = LikeText;
-// }
 
 function checkLoad() {
   if (globalState.Loaded) {
