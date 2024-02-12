@@ -19,9 +19,9 @@ console.log(USER.getComments());
 USER.getComments().forEach((com) => {
   console.log(com);
 });
-const PO = post.map((post) => post.comments);
-console.log(PO);
-UX.renderComments(PO);
+const comm = post.map((post) => post.comments);
+console.log(comm);
+UX.renderComments(comm);
 
 // user unutar njega (getFriends and getPosts)
 class Friends {
@@ -30,76 +30,7 @@ class Friends {
   }
   //   setfrineds (firends) i renderFriends
 }
-class Post {
-  constructor(post) {
-    this.post = post;
-  }
 
-  //   redeneringPosts() {
-  //     const posts = user.posts;
-  //     posts.forEach((post) => {
-  //       const postId = post.id;
-  //       const postElement = document.createElement("div");
-  //       postElement.classList.add("post");
-  //       postElement.setAttribute("data-id", postId);
-
-  //       postElement.innerHTML = `
-  //     <img src="${post.img}" alt="${post.img}" class="user-img" />
-  //     <div class="user-time">
-  //     <span class="user-profile">Sasa Nedic</span>
-  //     <p class="post-date">${post.postDate}</p>
-  //     </div>
-  //     <p class="post-text">${post.postText}</p>
-
-  //     <div class="likes-comments-container">
-  //       <p class="likes"><span class="like-emoji"><ion-icon name="thumbs-up-outline"></ion-icon></span> ${post.likes.length} </p>
-  //       <p class="comments">${post.comments.length} Comments</p>
-  //     </div>
-  //     <div class="comment-info current-user">
-  //         <img src="${post.img}" alt="${post.name}" />
-  //         <input type="text" placeholder="Write a comment"class="comment-input"></input>
-  //       </div>
-  //   `;
-
-  //       const commentInput = postElement.querySelector(".comment-input");
-
-  //       commentInput.addEventListener("keyup", function (event) {
-  //         if (event.keyCode === 13) {
-  //           addComments(postElement);
-  //         }
-  //       });
-
-  //       const commentsToggle = postElement.querySelector(".comments");
-
-  //       commentsToggle.addEventListener("click", function () {
-  //         const comments = postElement.querySelectorAll(".comment");
-  //         comments.forEach((commentInfo) => {
-  //           commentInfo.classList.toggle("hiddenComments");
-  //           addComments(postElement);
-  //         });
-  //       });
-
-  //       post.comments.forEach((comment) => {
-  //         const commentElement = document.createElement("div");
-  //         commentElement.classList.add("comment");
-
-  //         commentElement.innerHTML = `
-
-  //       <div class="comment-info">
-  //         <img src="${comment.img}" alt="${comment.name}" />
-  //         <p>${comment.name} ${comment.lastName}</p>
-  //       </div> <br>
-  //       <p class="comment-text">${comment.commentText}</p>
-  //     `;
-
-  //         postElement.appendChild(commentElement);
-  //       });
-  //       updateLikeDisplay(postElement, post.likes);
-
-  //       postsContainer.appendChild(postElement);
-  //     });
-  //   }
-}
 class Like {
   constructor(like) {
     this.like = like;
