@@ -31,15 +31,6 @@ class Friends {
   //   setfrineds (firends) i renderFriends
 }
 
-class Like {
-  constructor(like) {
-    this.like = like;
-  }
-  addLike(like) {
-    this.like.push(like);
-  }
-}
-
 setTimeout(function () {
   UX.renderPosts(posts);
   UX.renderFriends(friends);
