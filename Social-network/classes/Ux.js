@@ -44,22 +44,35 @@ export class Ux {
       postsContainer.appendChild(postElement);
     });
   }
-  renderComments(comm) {
-    console.log(comm);
-    comm.forEach((comment) => {
-      console.log(comment);
-      const postElement = document.createElement("div");
-      const commentElement = document.createElement("div");
+  renderComments(users) {
+    const commentElement = document.createElement("div");
+    // console.log(users);
+    // const commentsId = users.dateset.id;
+    // console.log(commentsId);
+    // commentElement.setAttribute("data-id", commentsId);
 
-      commentElement.innerHTML = `
-            <div class="comment-info">
-                <img src="${comment.img}" alt="${comment.name}" />
-                <p>${comment.name} ${comment.lastName}</p>
-            </div> <br>
-            <p class="comment-text">${comment.commentText}</p>
+    // const postid = postElement.dataset.id;
+
+    // const Unique = users.find((user) => console.log(commentsId));
+    // console.log(Unique);
+
+    users.forEach((comm) => {
+      console.log(comm.id);
+      comm.comments.forEach((comment) => {
+        // console.log(comment);
+        const commentElement = document.createElement("div");
+
+        const parentEL = document.querySelector(".posts");
+        commentElement.classList.add("comment");
+        commentElement.innerHTML = `
+          <div class="comment-info">
+            <img src="${comment.img}" alt="${comment.name}" />
+            <p>${comment.name} ${comment.lastName}</p>
+          </div> <br>
+          <p class="comment-text">${comment.commentText}</p>
         `;
-
-      postElement.appendChild(commentElement);
+        parentEL.appendChild(commentElement);
+      });
     });
   }
 }

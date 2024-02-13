@@ -5,25 +5,18 @@ import { Ux } from "./classes/UX";
 const app = document.getElementById("app");
 const spinner = document.querySelector(".spinner");
 const btn = document.querySelector(".nav__btn");
+
+const globalState = new GlobalState();
 const USER = new User(user);
 const UX = new Ux();
+
 const posts = USER.user.posts;
 const friends = USER.getFriends();
 
-const globalState = new GlobalState();
-// kreirati zasebne fajlove za class
+const comments = USER.getComments();
 
-const post = USER.user.posts;
+UX.renderComments(comments);
 
-console.log(USER.getComments());
-USER.getComments().forEach((com) => {
-  console.log(com);
-});
-const comm = post.map((post) => post.comments);
-console.log(comm);
-UX.renderComments(comm);
-
-// user unutar njega (getFriends and getPosts)
 class Friends {
   constructor(post) {
     this.post = post;
