@@ -45,22 +45,16 @@ export class Ux {
     });
   }
   renderComments(users) {
-    const commentElement = document.createElement("div");
-    // console.log(users);
-    // const commentsId = users.dateset.id;
-    // console.log(commentsId);
-    // commentElement.setAttribute("data-id", commentsId);
-
-    // const postid = postElement.dataset.id;
-
-    // const Unique = users.find((user) => console.log(commentsId));
-    // console.log(Unique);
-
+   
     users.forEach((comm) => {
-      console.log(comm.id);
-      comm.comments.forEach((comment) => {
+      const commentElement = document.createElement("div");
+
+      // const commentsId = comm.dateset.id;
+      // console.log(commentsId);
+      // commentElement.setAttribute("data-id", commentsId);
+      // console.log(comm.id);
+      // comm.comments.forEach((comment) => {
         // console.log(comment);
-        const commentElement = document.createElement("div");
 
         const parentEL = document.querySelector(".posts");
         commentElement.classList.add("comment");
