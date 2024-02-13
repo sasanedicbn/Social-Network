@@ -46,15 +46,15 @@ export class Ux {
   }
   renderComments(users) {
     const commentElement = document.createElement("div");
-    console.log(users);
-    const commentsId = users.dateset.id;
-    console.log(commentsId);
-    commentElement.setAttribute("data-id", commentsId);
+    // console.log(users);
+    // const commentsId = users.dateset.id;
+    // console.log(commentsId);
+    // commentElement.setAttribute("data-id", commentsId);
 
-    const postid = postElement.dataset.id;
+    // const postid = postElement.dataset.id;
 
-    const Unique = users.find((user) => console.log(commentsId));
-    console.log(Unique);
+    // const Unique = users.find((user) => console.log(commentsId));
+    // console.log(Unique);
 
     users.forEach((comm) => {
       console.log(comm.id);
