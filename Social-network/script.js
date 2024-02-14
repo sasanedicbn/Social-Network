@@ -25,7 +25,7 @@ class Friends {
 }
 
 setTimeout(function () {
-  UX.renderPosts(posts);
+  // UX.renderPosts(posts);
   UX.renderFriends(friends);
   globalState.setToLoaded();
   //   LikeEventListener();
