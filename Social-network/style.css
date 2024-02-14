@@ -277,6 +277,9 @@ li{
   cursor: pointer;
 }
 
+.comments-container{
+  display: none;
+} 
 .comment {
   margin-top: 10px;
   padding: 10px;

@@ -64,6 +64,22 @@ export class Ux {
       });
 
       postElement.appendChild(commentsContainer);
+      console.log(postElement);
+      const commentsButtons = postElement.querySelector(".comments");
+      commentsButtons.addEventListener("click", function () {
+        const containerComments = postElement.querySelector(
+          ".comments-container"
+        );
+        if (
+          containerComments.style.display === "none" ||
+          containerComments.style.display === ""
+        ) {
+          containerComments.style.display = "block";
+        } else {
+          containerComments.style.display = "none";
+        }
+      });
+      console.log(commentsButtons);
     });
   }
 }
