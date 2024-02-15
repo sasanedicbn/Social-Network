@@ -52,7 +52,11 @@ function addComments() {
     }
   });
 }
-
+function addLikes() {
+  document.addEventListener("click", function (event) {
+    const likeButton = event.target.closest(".like-emoji");
+  });
+}
 addLikes();
 addComments();
 console.log(comments);
