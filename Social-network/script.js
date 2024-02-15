@@ -29,7 +29,11 @@ class Friends {
 }
 
 function addComments() {
-  document.addEventListener("keydown", function (event) {});
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      const postElement = event.target.closest(".post");
+    }
+  });
 }
 addComments();
 console.log(comments);
