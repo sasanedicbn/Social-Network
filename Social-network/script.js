@@ -43,6 +43,10 @@ function addComments() {
           lastName: "Nedic",
           commentText: userInput,
         };
+
+        USER.addComment(newComment, postId);
+
+        UX.renderComments(USER.getComments());
       }
     }
   });
