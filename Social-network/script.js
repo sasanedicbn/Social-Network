@@ -37,6 +37,12 @@ function addComments() {
         const userInput = postElement
           .querySelector(".comment-input")
           .value.trim();
+        const newComment = {
+          img: "./assets/user.png",
+          name: "Sasa",
+          lastName: "Nedic",
+          commentText: userInput,
+        };
       }
     }
   });
