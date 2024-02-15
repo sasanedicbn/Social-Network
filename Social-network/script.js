@@ -32,6 +32,12 @@ function addComments() {
   document.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
       const postElement = event.target.closest(".post");
+      if (postElement) {
+        const postId = postElement.dataset.id;
+        const userInput = postElement
+          .querySelector(".comment-input")
+          .value.trim();
+      }
     }
   });
 }
