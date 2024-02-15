@@ -71,6 +71,8 @@ function addLikes() {
         USER.addLike({ name: "Sasa", lastname: "Nedic" }, postId);
       }
 
+      console.log(postElement);
+
       UX.renderComments(USER.getComments());
     }
   });
