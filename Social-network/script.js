@@ -82,10 +82,8 @@ addComments();
 console.log(comments);
 
 setTimeout(function () {
-  // UX.renderPosts(posts);
   UX.renderFriends(friends);
   globalState.setToLoaded();
-  //   LikeEventListener();
 }, 1000);
 
 function checkLoad() {
@@ -97,25 +95,6 @@ function checkLoad() {
   }
 }
 checkLoad();
-// function addComments(postElement) {
-//   const postid = postElement.dataset.id;
-//   const userInput = postElement.querySelector(".comment-input").value.trim();
-//   if (!userInput) return;
-
-//   const post = user.posts.find((post) => post.id === postid);
-
-//   console.log(post);
-//   const newComment = {
-//     img: "./assets/user.png",
-//     name: "Sasa",
-//     lastName: "Nedic",
-//     commentText: userInput,
-//   };
-//   post.comments.push(newComment);
-
-//   postsContainer.innerHTML = "";
-//   //   POST.redeneringPosts();
-// }
 
 btn.addEventListener("click", function () {
   const menu = document.querySelector(".log__out__container ");
