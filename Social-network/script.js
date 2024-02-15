@@ -28,6 +28,9 @@ class Friends {
   //   setfrineds (firends) i renderFriends
 }
 
+function addComments() {
+  document.addEventListener("keydown", function (event) {});
+}
 addComments();
 console.log(comments);
 
