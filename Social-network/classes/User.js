@@ -4,13 +4,16 @@ export class User {
   }
   getFriends() {
     return this.user.friends;
-    //   ovo treba prosijediti u UX renderFriends
   }
   getPosts() {
     return this.user.posts;
-    //   ovo treba prosijediti u UX redenerPosts
   }
   getComments() {
     return this.user.posts;
+  }
+  addComment(comment, id) {
+    const currentPost = this.getPosts().find((post) => post.id === id);
+    if (!currentPost) return;
+    currentPost.comments.push(comment);
   }
 }

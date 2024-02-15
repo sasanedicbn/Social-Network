@@ -18,8 +18,8 @@ export class Ux {
   }
 
   renderComments(posts) {
-    console.log(posts);
     const postsContainer = document.querySelector(".posts");
+    postsContainer.innerHTML = "";
 
     posts.forEach((post) => {
       const postElement = document.createElement("div");
@@ -49,7 +49,6 @@ export class Ux {
       commentsContainer.classList.add("comments-container");
 
       post.comments.forEach((comment) => {
-        console.log(comment);
         const commentElement = document.createElement("div");
         commentElement.classList.add("comment");
 

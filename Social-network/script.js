@@ -1,6 +1,7 @@
 import { user } from "./data";
 import { User } from "./classes/User";
 import { GlobalState } from "./classes/GlobalState";
+import { Comments } from "./classes/Comments";
 import { Ux } from "./classes/UX";
 const app = document.getElementById("app");
 const spinner = document.querySelector(".spinner");
@@ -9,13 +10,16 @@ const btn = document.querySelector(".nav__btn");
 const globalState = new GlobalState();
 const USER = new User(user);
 const UX = new Ux();
+const COMMENTS = new Comments(user);
 
-const posts = USER.user.posts;
+// console.log("comments", COMMENTS);
 const friends = USER.getFriends();
 
 const comments = USER.getComments();
 
 UX.renderComments(comments);
+// const addComment = COMMENTS
+// console.log(COMMENTS.post.posts);
 
 class Friends {
   constructor(post) {
@@ -23,6 +27,9 @@ class Friends {
   }
   //   setfrineds (firends) i renderFriends
 }
+
+addComments();
+console.log(comments);
 
 setTimeout(function () {
   // UX.renderPosts(posts);
