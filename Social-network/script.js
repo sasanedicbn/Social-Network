@@ -55,6 +55,14 @@ function addComments() {
 function addLikes() {
   document.addEventListener("click", function (event) {
     const likeButton = event.target.closest(".like-emoji");
+    if (likeButton) {
+      const postElement = likeButton.closest(".post");
+      const postId = postElement.dataset.id;
+      console.log(postElement);
+
+      let isLiked = postElement.classList.contains("liked");
+      console.log(isLiked);
+    }
   });
 }
 addLikes();
