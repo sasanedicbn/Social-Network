@@ -62,6 +62,16 @@ function addLikes() {
 
       let isLiked = postElement.classList.contains("liked");
       console.log(isLiked);
+
+      if (isLiked) {
+        postElement.classList.remove("liked");
+        USER.removeLike(postId);
+      } else {
+        postElement.classList.add("liked");
+        USER.addLike({ name: "Sasa", lastname: "Nedic" }, postId);
+      }
+
+      UX.renderComments(USER.getComments());
     }
   });
 }
