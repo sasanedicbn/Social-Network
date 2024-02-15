@@ -20,6 +20,7 @@ const comments = USER.getComments();
 UX.renderComments(comments);
 // const addComment = COMMENTS
 // console.log(COMMENTS.post.posts);
+console.log(USER.getLikes());
 
 class Friends {
   constructor(post) {
@@ -51,6 +52,8 @@ function addComments() {
     }
   });
 }
+
+addLikes();
 addComments();
 console.log(comments);
 

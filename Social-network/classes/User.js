@@ -16,4 +16,18 @@ export class User {
     if (!currentPost) return;
     currentPost.comments.push(comment);
   }
+  getLikes() {
+    return this.user.posts;
+  }
+  addLike(like, id) {
+    const currentLike = this.getLikes().find((like) => like.id === id);
+    if (!currentLike) return;
+    currentLike.likes.push(like);
+  }
+  removeLike(id) {
+    console.log(id);
+    const currentLike = this.getLikes().find((like) => like.id === id);
+    if (!currentLike) return;
+    currentLike.likes.splice(currentLike, 1);
+  }
 }
