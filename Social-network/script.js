@@ -90,4 +90,8 @@ btn.addEventListener("click", function () {
 searchInput.addEventListener("input", function () {
   const friends = USER.getFriends();
   const searchBar = searchInput.value.toLowerCase();
+  const friend = friends.filter(({ name, lastName }) => {
+    const fullName = `${name} ${lastName}`.toLowerCase();
+    return fullName.toLowerCase().includes(searchBar);
+  });
 });
