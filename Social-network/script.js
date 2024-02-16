@@ -98,6 +98,8 @@ searchInput.addEventListener("input", function () {
     UX.searchFriends(resultFriends, friend);
     resultFriends.style.display = "block";
   }
-
+  if (searchInput.value.length === 0) {
+    resultFriends.style.display = "none";
+  }
   console.log(friend);
 });
