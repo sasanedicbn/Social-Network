@@ -87,6 +87,10 @@ export class Ux {
     friends.forEach((friend) => {
       const liFriend = document.createElement("div");
       liFriend.classList.add("show-friends");
+      liFriend.innerHTML = `<img src="${friend.img}">
+      <p class="person__name">${friend.name} ${friend.lastName}</p>
+      `;
+      list.appendChild(liFriend);
     });
   }
 }
