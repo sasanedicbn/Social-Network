@@ -1,33 +1,25 @@
 import { user } from "./data";
 import { User } from "./classes/User";
 import { GlobalState } from "./classes/GlobalState";
-import { Comments } from "./classes/Comments";
 import { Ux } from "./classes/UX";
 const app = document.getElementById("app");
 const spinner = document.querySelector(".spinner");
 const btn = document.querySelector(".nav__btn");
+const searchInput = document.querySelector(".search__bar__input");
+const resultFriends = document.querySelector(".search__results");
 
 const globalState = new GlobalState();
 const USER = new User(user);
 const UX = new Ux();
-const COMMENTS = new Comments(user);
 
-// console.log("comments", COMMENTS);
 const friends = USER.getFriends();
 
 const comments = USER.getComments();
 
 UX.renderComments(comments);
-// const addComment = COMMENTS
-// console.log(COMMENTS.post.posts);
-console.log(USER.getLikes());
+// UX.searchFriends();
 
-class Friends {
-  constructor(post) {
-    this.post = post;
-  }
-  //   setfrineds (firends) i renderFriends
-}
+console.log(USER.getLikes());
 
 function addComments() {
   document.addEventListener("keydown", function (event) {
@@ -58,12 +50,10 @@ function addLikes() {
     if (likeButton) {
       const postElement = likeButton.closest(".post");
       const postId = postElement.dataset.id;
-      console.log(postElement);
+      const isLikedByCurrentUser = postElement.classList.contains("liked");
 
-      let isLiked = postElement.classList.contains("liked");
-      console.log(isLiked);
-
-      if (isLiked) {
+      // mogu mozda uslov ako ime je jednoako usenesemo imenu da se retunr
+      if (isLikedByCurrentUser) {
         postElement.classList.remove("liked");
         USER.removeLike(postId);
       } else {
@@ -71,19 +61,16 @@ function addLikes() {
         USER.addLike({ name: "Sasa", lastname: "Nedic" }, postId);
       }
 
-      console.log(postElement);
-
       UX.renderComments(USER.getComments());
     }
   });
 }
-addLikes();
-addComments();
-console.log(comments);
 
 setTimeout(function () {
   UX.renderFriends(friends);
   globalState.setToLoaded();
+  addLikes();
+  addComments();
 }, 1000);
 
 function checkLoad() {
