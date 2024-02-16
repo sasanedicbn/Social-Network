@@ -17,7 +17,6 @@ const friends = USER.getFriends();
 const comments = USER.getComments();
 
 UX.renderComments(comments);
-// UX.searchFriends();
 
 console.log(USER.getLikes());
 
@@ -101,5 +100,4 @@ searchInput.addEventListener("input", function () {
   if (searchInput.value.length === 0) {
     resultFriends.style.display = "none";
   }
-  console.log(friend);
 });
