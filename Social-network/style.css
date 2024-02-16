@@ -243,6 +243,7 @@ h4,h5{
   width: 125px;
   height: 125px;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 li{
@@ -318,6 +319,7 @@ li{
   display: flex;
   align-items: center;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .comment-info img {
