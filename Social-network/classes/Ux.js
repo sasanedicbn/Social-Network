@@ -84,5 +84,6 @@ export class Ux {
   }
   searchFriends(list, friends) {
     list.innerHTML = "";
+    friends.forEach((friend) => {});
   }
 }
