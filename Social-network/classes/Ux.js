@@ -84,6 +84,9 @@ export class Ux {
   }
   searchFriends(list, friends) {
     list.innerHTML = "";
-    friends.forEach((friend) => {});
+    friends.forEach((friend) => {
+      const liFriend = document.createElement("div");
+      liFriend.classList.add("show-friends");
+    });
   }
 }
