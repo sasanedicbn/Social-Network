@@ -94,4 +94,10 @@ searchInput.addEventListener("input", function () {
     const fullName = `${name} ${lastName}`.toLowerCase();
     return fullName.toLowerCase().includes(searchBar);
   });
+  if (friend) {
+    UX.searchFriends(resultFriends, friend);
+    resultFriends.style.display = "block";
+  }
+
+  console.log(friend);
 });
