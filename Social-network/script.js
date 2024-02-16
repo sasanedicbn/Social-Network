@@ -87,3 +87,5 @@ btn.addEventListener("click", function () {
   const menu = document.querySelector(".log__out__container ");
   menu.classList.toggle("showMenu");
 });
+searchInput.addEventListener("input", function () {
+);
