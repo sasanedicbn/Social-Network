@@ -88,4 +88,6 @@ btn.addEventListener("click", function () {
   menu.classList.toggle("showMenu");
 });
 searchInput.addEventListener("input", function () {
-);
+  const friends = USER.getFriends();
+  const searchBar = searchInput.value.toLowerCase();
+});
