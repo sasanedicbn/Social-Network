@@ -59,16 +59,16 @@ function addLikes() {
         console.log("ne");
       }
 
-      if (USER.addLike().includes())
-      if (isLikedByCurrentUser) {
-        postElement.classList.remove("liked");
-        USER.removeLike(postId);
-      } else {
-        postElement.classList.add("liked");
-        USER.addLike({ name: "Sasa", lastname: "Nedic", id: }, postId);
-      }
+      // if (USER.addLike().includes())
+      // if (isLikedByCurrentUser) {
+      //   postElement.classList.remove("liked");
+      //   USER.removeLike(postId);
+      // } else {
+      //   postElement.classList.add("liked");
+      //   USER.addLike({ name: "Sasa", lastname: "Nedic", id: }, postId);
+      // }
 
-      console.log(USER.getLikes());
+      // console.log(USER.getLikes());
       UX.renderComments(USER.getComments());
     }
   });
