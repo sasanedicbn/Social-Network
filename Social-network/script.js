@@ -18,8 +18,6 @@ const comments = USER.getComments();
 
 UX.renderComments(comments);
 
-console.log(USER.getLikes());
-
 function addComments() {
   document.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
@@ -50,16 +48,27 @@ function addLikes() {
       const postElement = likeButton.closest(".post");
       const postId = postElement.dataset.id;
       const isLikedByCurrentUser = postElement.classList.contains("liked");
+      //ako imma id svoj  onda lajk ako ne onda dislike
+      // const likedUser = USER.getLikes().forEach((like) => like.id);
 
-      // mogu mozda uslov ako ime je jednoako usenesemo imenu da se retunr
-      if (isLikedByCurrentUser) {
-        postElement.classList.remove("liked");
-        USER.removeLike(postId);
-      } else {
+      if (!postId) {
+        console.log("da");
         postElement.classList.add("liked");
-        USER.addLike({ name: "Sasa", lastname: "Nedic" }, postId);
+        USER.addLike({ name: "Sasa", lastname: "Nedic", id: postId }, postId);
+      } else {
+        console.log("ne");
       }
 
+      // if (USER.addLike().includes())
+      // if (isLikedByCurrentUser) {
+      //   postElement.classList.remove("liked");
+      //   USER.removeLike(postId);
+      // } else {
+      //   postElement.classList.add("liked");
+      //   USER.addLike({ name: "Sasa", lastname: "Nedic", id: }, postId);
+      // }
+
+      console.log(USER.getLikes());
       UX.renderComments(USER.getComments());
     }
   });
@@ -101,3 +110,6 @@ searchInput.addEventListener("input", function () {
     resultFriends.style.display = "none";
   }
 });
+
+// visina i sirina sa transform scale (i paddding)
+// sve to mora biti absolute
