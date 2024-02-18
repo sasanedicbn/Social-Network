@@ -50,14 +50,20 @@ function addLikes() {
       const isLikedByCurrentUser = postElement.classList.contains("liked");
       //ako imma id svoj  onda lajk ako ne onda dislike
       // const likedUser = USER.getLikes().forEach((like) => like.id);
+      const userLike = { name: "Sasa", lastname: "Nedic", id: postId };
+      console.log(userLike);
+      let postLiked = USER.getLikes().some((like) =>
+        like.likes.some((element) => element.id)
+      );
+      console.log(postLiked);
 
-      if (!postId) {
-        console.log("da");
-        postElement.classList.add("liked");
-        USER.addLike({ name: "Sasa", lastname: "Nedic", id: postId }, postId);
-      } else {
-        console.log("ne");
-      }
+      // if (USER.getLikes().filter((post) => post.id === postId)) {
+      //   console.log("da");
+      //   postElement.classList.add("liked");
+      //   USER.addLike(userLike, postId);
+      // } else if (USER.getLikes().filter((post) => post.id !== postId)) {
+      //   console.log("ne");
+      // }
 
       // if (USER.addLike().includes())
       // if (isLikedByCurrentUser) {
@@ -68,7 +74,7 @@ function addLikes() {
       //   USER.addLike({ name: "Sasa", lastname: "Nedic", id: }, postId);
       // }
 
-      // console.log(USER.getLikes());
+      console.log(USER.getLikes());
       UX.renderComments(USER.getComments());
     }
   });
@@ -110,3 +116,6 @@ searchInput.addEventListener("input", function () {
     resultFriends.style.display = "none";
   }
 });
+
+// visina i sirina sa transform scale (i paddding)
+// sve to mora biti absolute

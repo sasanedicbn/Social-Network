@@ -28,6 +28,6 @@ export class User {
     console.log(id);
     const currentLike = this.getLikes().find((like) => like.id === id);
     if (!currentLike) return;
-    currentLike.likes.splice(currentLike, 1);
+    currentLike.likes.pop();
   }
 }
