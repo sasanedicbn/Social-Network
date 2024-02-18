@@ -102,6 +102,3 @@ searchInput.addEventListener("input", function () {
     resultFriends.style.display = "none";
   }
 });
-
-// visina i sirina sa transform scale (i paddding)
-// sve to mora biti absolute
