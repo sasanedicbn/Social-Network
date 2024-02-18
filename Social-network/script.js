@@ -60,6 +60,11 @@ function addLikes() {
       if (!postLiked) {
         postElement.classList.add("liked");
         USER.addLike(userLike, postId);
+      } else {
+        console.log("no");
+        postElement.classList.remove("liked");
+        USER.removeLike(postId);
+        postLiked = false;
       }
       // if (USER.getLikes().filter((post) => post.id === postId)) {
       //   console.log("da");
